@@ -10,7 +10,9 @@ function start() {
     });
     
     
-    /*function sleep(ms) {
+    /*
+    test tratata!!!!!!
+    function sleep(ms) {
         var startTime = new Date().getTime();
         while (new Date().getTime() < startTime + ms);
         
