@@ -8,7 +8,7 @@ exports.start = function (route, handle){
         
         res.write("Hello World\n" + url.parse(req.url).pathname + "\n");
         res.write(route(handle, url.parse(req.url).pathname));
-        
+        res.write(new Date());
         res.end();
     }
     

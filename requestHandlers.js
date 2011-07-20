@@ -1,7 +1,7 @@
 var exec = require("child_process").exec;
 
 function start() {
-    console.log("Request handler 'start' was called.");
+    console.log("Request handler 'start' was called." + new Date());
     var content = "empty";
     
     exec("ls -lah", function (error, stdout, stderr) {
@@ -23,7 +23,7 @@ function start() {
 }
 
 function upload() {
-    console.log("Request handler 'upload' was called.")
+    console.log("Request handler 'upload' was called." + new Date())
     return "Hello Upload\n";
 }
 
