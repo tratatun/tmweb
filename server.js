@@ -12,7 +12,7 @@ exports.start = function (route, handle){
         res.end();
     }
     
-    //http.createServer(onRequest).listen(80);
+    http.createServer(onRequest);//.listen(80);
     //tratatest
 	console.log('Server running at localhost');
 }
