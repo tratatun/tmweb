@@ -25,7 +25,7 @@ function start(res) {
 function upload(res) {
     console.log("Request handler 'upload' was called." + new Date().toString())
     res.writeHead(200, {"Content-Type":"text/html"});
-    res.write("Hello Upload");
+    res.write("Hello Upload, отзовись!!!!!");
     res.end();
     //return "Hello Upload\n";
 }
