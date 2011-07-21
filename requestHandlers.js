@@ -2,10 +2,7 @@ var exec = require("child_process").exec;
 
 function start(res) {
     console.log("Request handler 'start' was called." + new Date().toString());
-    
-    
-    exec("ls ",
-        {timeout: 10000, maxBuffer: 20000*1024},
+    exec("ls",
         function (error, stdout, stderr) {
         res.writeHead(200, {"Content-Type": "text/html"});
         res.write(stdout);
@@ -27,7 +24,7 @@ function start(res) {
 
 function upload(res) {
     console.log("Request handler 'upload' was called." + new Date().toString())
-    res.writeHead(200,{"Content-Type":"text/html"});
+    res.writeHead(200, {"Content-Type":"text/html"});
     res.write("Hello Upload");
     res.end();
     //return "Hello Upload\n";
