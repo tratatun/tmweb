@@ -45,10 +45,10 @@ function start(response) {
         */
 }
 
-function upload(res) {
+function upload(res, postData) {
     console.log("'upload' was called." + new Date().toString())
     res.writeHead(200, {"Content-Type":"text/html"});
-    res.write("Hello Upload, !!!!!");
+    res.write("You have sent" + postData);
     res.end();
     //return "Hello Upload\n";
 }

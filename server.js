@@ -3,17 +3,22 @@ var url = require('url');
 
 exports.start = function (route, handle){
     function onRequest(req, res) {
-    
-        //res.writeHead(200, {'Content-Type': 'text/plain'});
+        var postData = "";
+        var pathName = url.parse(req.url).pathname;
+        console.log(new Date().toString() + "\nRequest for " + pathName + "\n");
+
+        req.setEncoding("utf8");
+        req.addListener("data", function (postDataChunk) {
+            postData += postDataChunk;
+            console.log("Received POST data chunk '" + postDataChunk + "'.");
+        });
+        req.addListener("end", function() {
+            route(handle, pathName, res, postData);
+        });
         
-        //res.write("Hello World\n" + url.parse(req.url).pathname + "\n");
-        console.log(new Date().toString() + "\nRequest for " + url.parse(req.url).pathname + "\n");
-        route(handle, url.parse(req.url).pathname, res);
-        //res.write(new Date().toString());
-        //res.end();
     }
     
     http.createServer(onRequest);//.listen(80);
     //tratatest
-	console.log('Server running at localhost');
+	console.log('Server created');
 }
