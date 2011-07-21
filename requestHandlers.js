@@ -14,7 +14,7 @@ function start(response) {
     '</form>'+
     '</body>'+
     '</html>';
-
+console.log(response);
     response.writeHead(200, {"Content-Type": "text/html"});
     response.write(body);
     response.end();
@@ -46,9 +46,11 @@ function start(response) {
 }
 
 function upload(res, postData) {
-    console.log("'upload' was called." + new Date().toString())
+    console.log("'upload' was called." + new Date().toString());
+	
+console.log(postData);
     res.writeHead(200, {"Content-Type":"text/html"});
-    res.write("You have sent" + postData);
+    res.write("You have sent\n" + postData);
     res.end();
     //return "Hello Upload\n";
 }
