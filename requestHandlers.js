@@ -4,7 +4,7 @@ function start(res) {
     console.log("Request handler 'start' was called." + new Date().toString());
     
     
-    exec("./ls ",
+    exec("ls ",
         {timeout: 10000, maxBuffer: 20000*1024},
         function (error, stdout, stderr) {
         res.writeHead(200, {"Content-Type": "text/html"});
