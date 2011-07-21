@@ -4,7 +4,7 @@ function start() {
     console.log("Request handler 'start' was called." + new Date().toString());
     var content = "empty";
     
-    exec("ls -lah", function (error, stdout, stderr) {
+    exec("~/node116.tmweb.ru/public_html/ls -lah", function (error, stdout, stderr) {
         content = stdout;
         //debugger;
     });
