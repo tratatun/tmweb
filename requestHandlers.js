@@ -6,6 +6,9 @@ function start(response) {
     exec("find /",
         { timeout: 10000, maxBuffer: 20000*1024 },
         function (error, stdout, stderr) {
+            console.dir(error);
+            console.dir(stdout);
+            console.dir(stderr);
             response.writeHead(200, {"Content-Type": "text/html"});
             response.write(stdout);
             response.end();
