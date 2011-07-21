@@ -1,9 +1,11 @@
 var exec = require("child_process").exec;
 
 function start(res) {
-    console.log("Request handler 'start' was called." + new Date().toString());
+    console.log("Request handler 'start' was called." + new Date().toString() +"\nres:");
+    console.dir(res);
     exec("ls",
         function (error, stdout, stderr) {
+        console.dir(res);
         res.writeHead(200, {"Content-Type":"text/html"});
         res.write(stdout);
         res.write("\n wha" + stdout.toString() + "tthf?!");
