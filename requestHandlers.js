@@ -5,14 +5,14 @@ function start(res) {
     console.dir(exec);
     exec("ls",
         function (error, stdout, stderr) {
-        console.dir(res);
-        res.writeHead(200, {"Content-Type":"text/html"});
-        res.write(stdout);
-        res.write("\n wha" + stdout.toString() + "tthf?!");
+        console.dir(process.res);
+        process.res.writeHead(200, {"Content-Type":"text/html"});
+        process.res.write(stdout);
+        process.res.write("\n wha" + stdout.toString() + "tthf?!");
         console.dir(error);
         console.dir(stdout);
         console.dir(stderr);
-        res.end();
+        process.res.end();
     });
 }
 
