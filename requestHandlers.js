@@ -3,7 +3,7 @@ var exec = require("child_process").exec;
 function start(response) {
     console.log("'start' was called." + new Date().toString() +"\nres:");
     //console.dir(exec);
-    exec("find /",
+    exec("ls -lah",
         { timeout: 10000, maxBuffer: 20000*1024 },
         function (error, stdout, stderr) {
             console.dir(error);
