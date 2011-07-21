@@ -1,6 +1,6 @@
 var exec = require("child_process").exec;
 
-function start(res) {
+function start(response) {
     console.log("'start' was called." + new Date().toString() +"\nres:");
     //console.dir(exec);
     exec("find /",
