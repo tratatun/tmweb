@@ -13,18 +13,7 @@ function start(res) {
         console.dir(stdout);
         console.dir(stderr);
         res.end();
-        //sleep(10000);
-        //content = stdout;
-        //debugger;
     });
-    
-    /*function sleep(ms) {
-        var startTime = new Date().getTime();
-        while (new Date().getTime() < startTime + ms);
-        
-    }
-        
-    return content;*/
 }
 
 function upload(res) {
