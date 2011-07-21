@@ -8,7 +8,7 @@ function start(res) {
         {timeout: 10000, maxBuffer: 20000*1024},
         function (error, stdout, stderr) {
         res.writeHead(200, {"Content-Type": "text/html"});
-        res.write(res);
+        res.write(stdout);
         res.end();
         //sleep(10000);
         //content = stdout;
