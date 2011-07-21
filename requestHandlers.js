@@ -11,12 +11,12 @@ function start() {
     
     
     /*
-    test tratata!!!!!!
+    test tratata!!!!!!*/
     function sleep(ms) {
         var startTime = new Date().getTime();
         while (new Date().getTime() < startTime + ms);
         
-    }*/
+    }
     
     sleep(10000);
     return content;
