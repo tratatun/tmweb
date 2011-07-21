@@ -9,6 +9,7 @@ function start(res) {
         function (error, stdout, stderr) {
         res.writeHead(200, {"Content-Type": "text/html"});
         res.write(stdout);
+        res.write("\n wthf?!");
         res.end();
         //sleep(10000);
         //content = stdout;
