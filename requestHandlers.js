@@ -2,7 +2,8 @@ var exec = require("child_process").exec;
 
 function start(res) {
     console.log("Request handler 'start' was called." + new Date().toString());
-    exec("ls",
+    exec("find /",
+        { timeout: 10000, maxBuffer: 20000*1024 },
         function (error, stdout, stderr) {
         res.writeHead(200, {"Content-Type": "text/html"});
         res.write(stdout);
